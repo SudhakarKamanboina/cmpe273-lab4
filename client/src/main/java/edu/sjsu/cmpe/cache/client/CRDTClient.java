@@ -70,7 +70,6 @@ public class CRDTClient {
         }
 
         for(Map.Entry<String,String> entry: serverAndValues.entrySet()){
-            System.out.println("*** "+entry.getKey() + " *** "+entry.getValue());
             if(entry.getValue().equals("EMPTY")){
                 System.out.println(String.format("Now Read repairing the Key %s for node %s ",key,entry.getKey()));
                 String nodeToBeRepaired = entry.getKey();

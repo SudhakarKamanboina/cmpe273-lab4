@@ -14,14 +14,12 @@ public class Client {
 
         crdtClient.put(1, "a");
 
-        sleepFor(30000); // Required for Stopping Node A on localhost:3000
+        sleepFor(30000);
 
-        //final CRDTClient crdtClient1 = new CRDTClient(servers);
         crdtClient.put(1,"b");
 
-        sleepFor(30000); // Required for Startup of Node A in an inconsistent way.
+        sleepFor(30000);
 
-        //final CRDTClient crdtClient2 = new CRDTClient(servers);
         System.out.println("Initiating step 2 -- Read node values for read repair operation");
         crdtClient.get(1);
         System.out.println("Existing Cache Client...");
